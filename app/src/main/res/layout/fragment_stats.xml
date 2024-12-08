@@ -1,14 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Stats">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/homeFromStatsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="HOME"
+        app:layout_constraintEnd_toEndOf="@+id/quizStatsTitle"
+        app:layout_constraintStart_toStartOf="@+id/quizStatsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/totalPercentText" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/quizStatsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUIZ STATISTICS"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29000002" />
+
+    <TextView
+        android:id="@+id/totalPercentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="% Total Score:"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/quizPassRateText"
+        app:layout_constraintTop_toBottomOf="@+id/totalCorrectText" />
+
+    <TextView
+        android:id="@+id/quizPassRateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="-175dp"
+        android:gravity="right"
+        android:text="Pass %:"
+        android:textDirection="ltr"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizStatsTitle" />
+
+    <TextView
+        android:id="@+id/totalCorrectValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-174dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quzPassRateValue" />
+
+    <TextView
+        android:id="@+id/quzPassRateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-174dp"
+        android:layout_marginTop="50dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizStatsTitle" />
+
+    <TextView
+        android:id="@+id/totalCorrectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="# Correct:"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/quizPassRateText"
+        app:layout_constraintTop_toBottomOf="@+id/quizPassRateText" />
+
+    <TextView
+        android:id="@+id/totalPercentValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-174dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalCorrectValue" />
+</androidx.constraintlayout.widget.ConstraintLayout>

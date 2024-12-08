@@ -30,10 +30,21 @@
         android:id="@+id/results"
         android:name="com.example.amazingquiz.Results"
         android:label="fragment_results"
-        tools:layout="@layout/fragment_results" />
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_results_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_results_to_stats"
+            app:destination="@id/stats" />
+    </fragment>
     <fragment
         android:id="@+id/stats"
         android:name="com.example.amazingquiz.Stats"
         android:label="fragment_stats"
-        tools:layout="@layout/fragment_stats" />
+        tools:layout="@layout/fragment_stats" >
+        <action
+            android:id="@+id/action_stats_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
 </navigation>

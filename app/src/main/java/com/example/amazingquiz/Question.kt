@@ -87,6 +87,10 @@ class Question : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        questionsAnswered = 0
+        questionsCorrect = 0
+        quizPassed = false
+
         answerGroup = view.findViewById(R.id.answerGroup)
         answerChoice0 = view.findViewById(R.id.answerButton0)
         answerChoice1 = view.findViewById(R.id.answerButton1)
@@ -127,6 +131,7 @@ class Question : Fragment() {
             }
         }
 
+        updateHistory(true)
         loadQuestion(0)
 
     }

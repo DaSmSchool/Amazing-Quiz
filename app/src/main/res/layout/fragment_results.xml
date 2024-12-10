@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/quizResultsTitle"
+        style="@style/bigTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="QUIZ RESULTS"

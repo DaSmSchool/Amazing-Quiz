@@ -29,14 +29,21 @@
         android:id="@+id/answerGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/quizSubmitButton"
         app:layout_constraintEnd_toEndOf="@+id/questionText"
         app:layout_constraintStart_toStartOf="@+id/questionText"
         app:layout_constraintTop_toBottomOf="@+id/questionText">
 
         <RadioButton
+            android:id="@+id/answerButton0"
+            style="@style/possibleAnswerStyle"
+            android:text="RadioButton" />
+
+        <RadioButton
             android:id="@+id/answerButton1"
             style="@style/possibleAnswerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="RadioButton" />
 
         <RadioButton
@@ -53,17 +60,10 @@
             android:layout_height="wrap_content"
             android:text="RadioButton" />
 
-        <RadioButton
-            android:id="@+id/answerButton4"
-            style="@style/possibleAnswerStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
-
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/quizSubmitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"

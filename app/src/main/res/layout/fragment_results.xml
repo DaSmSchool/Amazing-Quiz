@@ -24,13 +24,13 @@
         android:id="@+id/quizOutcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="-175dp"
         android:gravity="right"
         android:text="Quiz Outcome:"
         android:textDirection="ltr"
         android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizResultsTitle" />
 
     <TextView
@@ -57,33 +57,33 @@
         android:id="@+id/quizOutcomeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-174dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
         android:text="TextView"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/quizOutcomeText"
         app:layout_constraintTop_toBottomOf="@+id/quizResultsTitle" />
 
     <TextView
         android:id="@+id/amountCorrectValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-174dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/quizOutcomeValue"
         app:layout_constraintTop_toBottomOf="@+id/quizOutcomeValue" />
 
     <TextView
         android:id="@+id/percentScoreValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-174dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/amountCorrectValue"
         app:layout_constraintTop_toBottomOf="@+id/amountCorrectValue" />
 
     <Button

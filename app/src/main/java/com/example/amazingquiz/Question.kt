@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -95,10 +96,10 @@ class Question : Fragment() {
         submitButton = view.findViewById(R.id.quizSubmitButton)
 
         answerGroup.setOnCheckedChangeListener { group, checkedId ->
-
+            if (checkedId == -1) return@setOnCheckedChangeListener
             var answerChosen: RadioButton = view.findViewById(checkedId)
 
-            for (answerChoiceInd in 0..<answerStrings.size) {
+            for (answerChoiceInd in 0..<answerStrings[questionsAnswered].size) {
                 if (answerChosen.text.toString().contentEquals(answerStrings[questionsAnswered][answerChoiceInd])) {
                     chosenInd = answerChoiceInd
                 }
@@ -107,6 +108,7 @@ class Question : Fragment() {
 
         submitButton.setOnClickListener {
             if (chosenInd != -1) {
+
                 if (chosenInd == correctAnswers[questionsAnswered]) questionsCorrect += 1
                 questionsAnswered += 1
                 chosenInd = -1
@@ -130,7 +132,12 @@ class Question : Fragment() {
     }
 
     fun loadQuestion(qNum: Int) {
-        questionTitle.text = "Q${questionsAnswered+1}: ${questionStrings[questionsAnswered]}"
+        answerGroup.clearCheck()
+        questionTitle.text = "Q${questionsAnswered+1}: ${questionStrings[qNum]}"
+        answerChoice0.text = answerStrings[qNum][0]
+        answerChoice1.text = answerStrings[qNum][1]
+        answerChoice2.text = answerStrings[qNum][2]
+        answerChoice3.text = answerStrings[qNum][3]
     }
 
     fun updateHistory(fresh: Boolean) {

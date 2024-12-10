@@ -19,6 +19,7 @@
 
     <TextView
         android:id="@+id/quizStatsTitle"
+        style="@style/bigTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="QUIZ STATISTICS"
@@ -43,35 +44,36 @@
         android:id="@+id/quizPassRateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="-175dp"
         android:gravity="right"
         android:text="Pass %:"
         android:textDirection="ltr"
         android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizStatsTitle" />
 
     <TextView
         android:id="@+id/totalCorrectValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-174dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quzPassRateValue" />
+        app:layout_constraintStart_toStartOf="@+id/quizPassRateValue"
+        app:layout_constraintTop_toBottomOf="@+id/quizPassRateValue" />
 
     <TextView
-        android:id="@+id/quzPassRateValue"
+        android:id="@+id/quizPassRateValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-174dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="83dp"
         android:text="TextView"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/quizPassRateText"
         app:layout_constraintTop_toBottomOf="@+id/quizStatsTitle" />
 
     <TextView
@@ -88,10 +90,9 @@
         android:id="@+id/totalPercentValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-174dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/totalCorrectValue"
         app:layout_constraintTop_toBottomOf="@+id/totalCorrectValue" />
 </androidx.constraintlayout.widget.ConstraintLayout>
